@@ -1,8 +1,8 @@
 class Findest < Formula
   desc "Fast, keyboard-friendly file browser for macOS"
   homepage "https://github.com/ariel-bentu/findest"
-  url "https://github.com/ariel-bentu/findest/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "1c40e607c8547df461160cb99847db490297756e12feb509ced780833b683ca4"
+  url "https://github.com/ariel-bentu/findest/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "9489288a8bcdbb649bac785a0227f0371458786a39417df6f4047d10d366a9f0"
   license "MIT"
   head "https://github.com/ariel-bentu/findest.git", branch: "main"
 
