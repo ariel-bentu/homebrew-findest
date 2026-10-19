@@ -1,16 +1,14 @@
 class Findest < Formula
   desc "Fast, keyboard-friendly file browser for macOS"
   homepage "https://github.com/ariel-bentu/findest"
-  url "https://github.com/ariel-bentu/findest/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "7b2f5678fbff9c158d96e0d6c2427e88f7242a348c2c336b15ec54c72af7354f"
+  url "https://github.com/ariel-bentu/findest/releases/download/v0.8.0/findest-0.8.0-macos.tar.gz"
+  sha256 "a8a0e35fc18531b93de474aa69c9090a454d6b4d460684e2bc885894594e2e93"
   license "MIT"
-  head "https://github.com/ariel-bentu/findest.git", branch: "main"
 
-  depends_on "rust" => :build
   depends_on :macos
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "crates/findest")
+    bin.install "findest"
   end
 
   def caveats
