@@ -5,6 +5,11 @@ class Findest < Formula
   sha256 "dd8abb559f66d98ca42a71ae34852b6c228b1e374b56159f347385a17103c7e2"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/ariel-bentu/findest/releases/download/v0.9.0"
+    sha256 cellar: :any_skip_relocation, all: "1f06e60a7b63db09e44469034a5fa18016c2e31d3bca4e4da2eb8437b462befb"
+  end
+
   depends_on :macos
 
   def install
