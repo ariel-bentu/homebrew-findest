@@ -1,13 +1,13 @@
 class Findest < Formula
   desc "Fast, keyboard-friendly file browser for macOS"
   homepage "https://github.com/ariel-bentu/findest"
-  url "https://github.com/ariel-bentu/findest/releases/download/v0.9.0/findest-0.9.0-macos.tar.gz"
-  sha256 "dd8abb559f66d98ca42a71ae34852b6c228b1e374b56159f347385a17103c7e2"
+  url "https://github.com/ariel-bentu/findest/releases/download/v0.10.0/findest-0.10.0-macos.tar.gz"
+  sha256 "b79d3970076969644cb2ca77f0b62084c92d0819e6a330c417a91246b17d2855"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/ariel-bentu/findest/releases/download/v0.9.0"
-    sha256 cellar: :any_skip_relocation, all: "1f06e60a7b63db09e44469034a5fa18016c2e31d3bca4e4da2eb8437b462befb"
+    root_url "https://github.com/ariel-bentu/findest/releases/download/v0.10.0"
+    sha256 cellar: :any_skip_relocation, all: "4d3a876191d571906f9630841e34bb5426b1dd5a96a905fcc5343b7512b58031"
   end
 
   depends_on :macos
@@ -24,10 +24,15 @@ class Findest < Formula
 
       `findest <folder>` opens a folder. Cloud drives and the Trash need
       Full Disk Access: System Settings > Privacy & Security.
+
+      `findest search <query>` searches file names from the terminal.
+      To let AI agents (Claude Code) use it:
+        findest skill install
     EOS
   end
 
   test do
     assert_predicate bin/"findest", :executable?
+    assert_match "findest search", shell_output("#{bin}/findest help")
   end
 end
